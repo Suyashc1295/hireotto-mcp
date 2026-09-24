@@ -26,19 +26,35 @@ Start with a small read request:
 
 For client-specific instructions, see the [HireOtto documentation](https://docs.hireotto.com/setup/connect-ai-tool).
 
-### Gemini CLI
+### Antigravity CLI
 
-Install the extension from this repository:
+Antigravity supports remote MCP servers. Add the connections you want to `~/.gemini/config/mcp_config.json` (or a project's `.agents/mcp_config.json`) using `serverUrl`. For example, to connect Google Ads and Search Console:
+
+```json
+{
+  "mcpServers": {
+    "hireotto-google-ads": {
+      "serverUrl": "https://googleads.hireotto.com/mcp"
+    }
+  }
+}
+```
+
+Use the other endpoints in the table above to add LinkedIn Ads, Tag Manager, or GA4. Open `/mcp` in Antigravity CLI to check the connection, then complete the HireOtto and platform authorization steps. See [Google's MCP configuration guide](https://antigravity.google/docs/mcp/) for client-specific instructions.
+
+### Gemini CLI (supported paid and enterprise access)
+
+Google [moved consumer users to Antigravity CLI](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/) in June 2026. Gemini CLI remains available with supported enterprise licenses or paid API keys. For those users, this repository also contains a Gemini CLI extension:
 
 ```bash
 gemini extensions install https://github.com/Suyashc1295/hireotto-mcp
 ```
 
-Restart Gemini CLI, run `/mcp` to see the available connections, and use `/mcp auth` to sign in to the servers you need. The extension configures four MCP connections; you can authorize the platforms relevant to your work.
+Restart Gemini CLI, run `/mcp` to inspect the connections, and use `/mcp auth` to sign in to the servers you need.
 
 ## About this repository
 
-This repository contains public connection instructions and the Gemini CLI extension manifest. HireOtto's hosted MCP servers and private application code are not included.
+This repository contains public MCP connection instructions and a Gemini CLI extension manifest. HireOtto's hosted MCP servers and private application code are not included.
 
 - [HireOtto website](https://hireotto.com/)
 - [Documentation](https://docs.hireotto.com/)
