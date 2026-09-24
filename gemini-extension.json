@@ -1,0 +1,19 @@
+{
+  "name": "hireotto",
+  "version": "1.0.0",
+  "description": "Connect Google Ads, LinkedIn Ads, Google Tag Manager, Google Search Console, and GA4 to Gemini CLI with HireOtto.",
+  "mcpServers": {
+    "hireotto-google-ads": {
+      "httpUrl": "https://googleads.hireotto.com/mcp"
+    },
+    "hireotto-linkedin-ads": {
+      "httpUrl": "https://linkedinads.hireotto.com/mcp"
+    },
+    "hireotto-tag-manager": {
+      "httpUrl": "https://tagmanager.hireotto.com/mcp"
+    },
+    "hireotto-ga4": {
+      "httpUrl": "https://ga4.hireotto.com/mcp"
+    }
+  }
+}
